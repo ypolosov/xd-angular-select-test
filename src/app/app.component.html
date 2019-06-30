@@ -1,0 +1,20 @@
+<div class="container">
+	<select [(ngModel)]="platform" (change)="platformChanged()">
+		<option *ngFor="let p of platforms" [ngValue]="p">{{ p.name }}</option>
+	</select>
+	<select [(ngModel)]="baseline">
+		<option *ngFor="let b of platform.baselines" [ngValue]="b">{{ b.name }}</option>
+	</select>
+	<dl>
+		<dt>Selected platform</dt>
+		<dd>
+			<span *ngIf="platform">{{ platform.name }}</span>
+			<span *ngIf="!platform">Noting - not valid value</span>
+		</dd>
+		<dt>Selected baseline</dt>
+		<dd>
+			<span *ngIf="baseline">{{ baseline.name }}</span>
+			<span *ngIf="!baseline">Noting - not valid value</span>
+		</dd>
+	</dl>
+</div>

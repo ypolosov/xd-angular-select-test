@@ -1,0 +1,16 @@
+{
+    "id": "select.sample.plugin",
+    "name": "Sample Select plugin",
+    "version": "0.1.0.0",
+    "host": {
+        "app": "XD",
+        "minVersion": "20.0"
+    },
+    "uiEntryPoints": [
+        {
+            "type": "panel",
+            "label": "Show Select",
+            "panelId": "samplePanel"
+        }
+    ]
+}
