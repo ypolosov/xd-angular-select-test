@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
 	title = "sample-plugin";
+	htmlValue = "some <b>formated</b> value";
 
 	public readonly platforms = [
 		{ name: "iOS", baselines: [ { name: "@1x", value: 1 }, { name: "@2x", value: 2 } ] },

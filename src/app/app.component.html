@@ -1,4 +1,5 @@
 <div class="container">
+	<span [innerHTML]="htmlValue"></span>
 	<select [(ngModel)]="platform" (change)="platformChanged()">
 		<option *ngFor="let p of platforms" [ngValue]="p">{{ p.name }}</option>
 	</select>
