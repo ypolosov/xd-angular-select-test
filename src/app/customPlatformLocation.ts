@@ -1,6 +1,7 @@
 import { PlatformLocation, LocationChangeListener } from "@angular/common";
+import { Injectable } from "@angular/core";
 
-
+@Injectable()
 export class CustomPlatformLocation extends PlatformLocation {
 	// https://angular.io/api/common/PlatformLocation#pathname
 	// Sample implementation available in node_modules\@angular\platform-browser\bundles\platform-browser.umd.js
@@ -20,9 +21,33 @@ export class CustomPlatformLocation extends PlatformLocation {
 		// console.log("hash");
 		return "";
 	}
+
+	public get href(): string {
+		// console.log("hash");
+		return "";
+	}
+
+	public get protocol(): string {
+		// console.log("hash");
+		return "";
+	}
+
+	public get hostname(): string {
+		// console.log("hash");
+		return "";
+	}
+
+	public get port(): string {
+		// console.log("hash");
+		return "";
+	}
 	public getBaseHrefFromDOM(): string {
 		// looks for base element in DOM and returns its href value
 		return "/";
+	}
+
+	public getState(): unknown {
+		return;
 	}
 
 	public onPopState(fn: LocationChangeListener): void {
